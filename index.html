@@ -3,160 +3,143 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- displays site properly based on user's device -->
-
     <link rel="icon" type="image/png" sizes="32x32"
-      href="./images/favicon-32x32.png">
-
-    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+      href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="assets/CSS/main.css">
+    <title>Shortly URL | Shortening API</title>
     <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
   </head>
   <body>
+    <header>
+      <div class="container">
+        <img src="assets/images/logo.svg" alt="logo" class="logo">
+        <nav>
+          <div class="nav-links">
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">Resources</a>
+          </div>
+          <div class="logging">
+            <a href="#">Login</a>
+            <a href="#" class="button">Sign Up</a>
+          </div>
+        </div>
 
-    <header class="container">
-      <img src="assets/images/logo.svg" alt="logo" class="logo">
-
-      <nav>
-        <a>Features</a>
-        <a>Pricing</a>
-        <a>Resources</a>
       </nav>
-
-      <div class="logging">
-        <a href>Login</a>
-        <a href class="signup button">Sign Up</a>
-      </div>
     </header>
 
-    <div class="hero container">
-      <div>
-        <h2>More than just shorter links</h2>
-        <p>
-          Build your brand’s recognition and get detailed insights
-          on how your links are performing.
-        </p>
-        <a href class="button get-started">Get Started</a>
-      </div>
-
-      <img src="assets/images/illustration-working.svg" alt class="hero">
-    </div>
-
-    <form action class="shorten container">
-      <input type="text" name="source-url"
-        placeholder="Shorten a link here..."
-        class="source-url">
-
-      <input type="button" value="Shorten It!" class="button">
-    </form>
-
-    <div class="Statistics container">
-      <h4>Advanced Statistics</h4>
-      <p>
-        Track how your links are performing across the web with our advanced
-        statistics dashboard.
-      </p>
-    </div>
-
-    <div class="cards container">
-      <div class="card">
-        <img src="assets/images/icon-brand-recognition.svg" alt>
-        <div>
-          <h5>Brand Recognition</h5>
-          <p>
-            Boost your brand recognition with each click. Generic links don’t
-            mean a thing. Branded links help instil confidence in your content.
-          </p>
+    <main>
+      <section class="hero container">
+        <div class="hero-text">
+          <h2>More than just shorter links</h2>
+          <p>Build your brand’s recognition and get detailed insights on how
+            your links are performing.</p>
+          <a href="#" class="button get-started">Get Started</a>
         </div>
-      </div>
-
-      <div class="card">
-        <img src="assets/images/icon-detailed-records.svg" alt>
-        <div>
-          <h5>Detailed Records</h5>
-          <p>
-            Gain insights into who is clicking your links. Knowing when and
-            where people engage with your content helps inform better decisions.
-          </p>
+        <div class="hero-img">
+          <img src="assets/images/illustration-working.svg"
+            alt="Working illustration">
         </div>
-      </div>
+      </section>
 
-      <div class="card">
-        <img src="assets/images/icon-fully-customizable.svg" alt>
-        <div>
-          <h5>Fully Customizable</h5>
-          <p>
-            Improve brand awareness and content discoverability through
-            customizable links, supercharging audience engagement.
-          </p>
+      <section class="shorten container">
+        <form>
+          <input type="url" name="source-url"
+            placeholder="Shorten a link here..." required>
+          <button type="button" class="button">Shorten It!</button>
+        </form>
+      </section>
+
+      <section class="statistics">
+        <div class="container">
+          <div class="head">
+            <h4>Advanced Statistics</h4>
+            <p>Track how your links are performing across the web with our
+              advanced statistics dashboard.</p>
+          </div>
+          <div class="cards">
+            <article class="card card-1">
+              <img src="assets/images/icon-brand-recognition.svg"
+                alt="Brand Recognition">
+              <div>
+                <h5>Brand Recognition</h5>
+                <p>Boost your brand recognition with each click. Branded links
+                  help instill confidence in your content.</p>
+              </div>
+            </article>
+            <article class="card card-2">
+              <img src="assets/images/icon-detailed-records.svg"
+                alt="Detailed Records">
+              <div>
+                <h5>Detailed Records</h5>
+                <p>Gain insights into who is clicking your links. Knowing when
+                  and where people engage helps inform better decisions.</p>
+              </div>
+            </article>
+            <article class="card card-3">
+              <img src="assets/images/icon-fully-customizable.svg"
+                alt="Fully Customizable">
+              <div>
+                <h5>Fully Customizable</h5>
+                <p>Improve brand awareness through customizable links,
+                  supercharging audience engagement.</p>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div class="boost container">
-      <h5>Boost your links today</h5>
-      <a href class="button get-started">Get Started</a>
-    </div>
+      <section class="boost">
+        <div class="container">
+          <h5>Boost your links today</h5>
+          <a href="#" class="button get-started">Get Started</a>
+        </div>
+      </section>
+    </main>
 
-    <footer class="container">
-      <img src="assets/images/logo.svg" alt="logo" class="logo">
-      <ul>
-        <li>
+    <footer>
+      <div class="container">
+        <p class="logo">Shortly</p>
+        <div class="footer-links">
           <ul>
             <li><h6>Features</h6></li>
             <li>Link Shortening</li>
             <li>Branded Links</li>
-            <li>Analytics/li>
-            </ul>
-          </li>
-
-          <li>
-            <ul>
-              <li><h6>Resources</h6></li>
-              <li>Blog</li>
-              <li>Developers</li>
-              <li>Support</li>
-            </ul>
-          </li>
-
-          <li>
-            <ul>
-              <li><h6>Company</h6></li>
-              <li>About</li>
-              <li>Our Team</li>
-              <li>Careers</li>
-              <li>Contact</li>
-            </ul>
-          </li>
-
-          <li class="social">
-
-            <img src="assets/images/icon-facebook.svg" alt="icon-facebook"
-              class="contact">
-
-            <img src="assets/images/icon-twitter.svg" alt="icon-twitter"
-              class="contact">
-
-            <img src="assets/images/icon-pinterest.svg" alt="icon-pinterest"
-              class="contact">
-
-            <img src="assets/images/icon-instagram.svg" alt="icon-instagram"
-              class="contact">
-
-          </li>
-
-        </ul>
-
-        <div class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
-            target="_blank">Frontend Mentor</a>.
-          Coded by <a href="https://github.com/Astr0n1">Ayman hussein</a>.
+            <li>Analytics</li>
+          </ul>
+          <ul>
+            <li><h6>Resources</h6></li>
+            <li>Blog</li>
+            <li>Developers</li>
+            <li>Support</li>
+          </ul>
+          <ul>
+            <li><h6>Company</h6></li>
+            <li>About</li>
+            <li>Our Team</li>
+            <li>Careers</li>
+            <li>Contact</li>
+          </ul>
         </div>
-      </footer>
-
-    </body>
-  </html>
+        <div class="social">
+          <a href="#"><img src="assets/images/icon-facebook.svg"
+              alt="Facebook"></a>
+          <a href="#"><img src="assets/images/icon-twitter.svg"
+              alt="Twitter"></a>
+          <a href="#"><img src="assets/images/icon-pinterest.svg"
+              alt="Pinterest"></a>
+          <a href="#"><img src="assets/images/icon-instagram.svg"
+              alt="Instagram"></a>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/Astr0n1">Ayman Hussein</a>.
+      </div>
+    </footer>
+  </body>
+</html>
