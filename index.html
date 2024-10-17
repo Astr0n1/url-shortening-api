@@ -1,85 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="./images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
-</head>
-<body>
+  </head>
+  <body>
 
-  Features
-  Pricing
-  Resources
+    <header class="container">
+      <img src="assets/images/logo.svg" alt="logo" class="logo">
 
-  Login
-  Sign Up
+      <nav>
+        <a>Features</a>
+        <a>Pricing</a>
+        <a>Resources</a>
+      </nav>
 
-  More than just shorter links
+      <div class="logging">
+        <a href>Login</a>
+        <a href class="signup button">Sign Up</a>
+      </div>
+    </header>
 
-  Build your brand’s recognition and get detailed insights 
-  on how your links are performing.
+    <div class="hero container">
+      <div>
+        <h2>More than just shorter links</h2>
+        <p>
+          Build your brand’s recognition and get detailed insights
+          on how your links are performing.
+        </p>
+        <a href class="button get-started">Get Started</a>
+      </div>
 
-  Get Started
-  
-  Shorten a link here...
+      <img src="assets/images/illustration-working.svg" alt class="hero">
+    </div>
 
-  Shorten It!
+    <form action class="shorten container">
+      <input type="text" name="source-url"
+        placeholder="Shorten a link here..."
+        class="source-url">
 
-  Advanced Statistics
+      <input type="button" value="Shorten It!" class="button">
+    </form>
 
-  Track how your links are performing across the web with our 
-  advanced statistics dashboard.
+    <div class="Statistics container">
+      <h4>Advanced Statistics</h4>
+      <p>
+        Track how your links are performing across the web with our advanced
+        statistics dashboard.
+      </p>
+    </div>
 
-  Brand Recognition
+    <div class="cards container">
+      <div class="card">
+        <img src="assets/images/icon-brand-recognition.svg" alt>
+        <div>
+          <h5>Brand Recognition</h5>
+          <p>
+            Boost your brand recognition with each click. Generic links don’t
+            mean a thing. Branded links help instil confidence in your content.
+          </p>
+        </div>
+      </div>
 
-  Boost your brand recognition with each click. Generic links don’t 
-  mean a thing. Branded links help instil confidence in your content.
+      <div class="card">
+        <img src="assets/images/icon-detailed-records.svg" alt>
+        <div>
+          <h5>Detailed Records</h5>
+          <p>
+            Gain insights into who is clicking your links. Knowing when and
+            where people engage with your content helps inform better decisions.
+          </p>
+        </div>
+      </div>
 
-  Detailed Records
+      <div class="card">
+        <img src="assets/images/icon-fully-customizable.svg" alt>
+        <div>
+          <h5>Fully Customizable</h5>
+          <p>
+            Improve brand awareness and content discoverability through
+            customizable links, supercharging audience engagement.
+          </p>
+        </div>
+      </div>
+    </div>
 
-  Gain insights into who is clicking your links. Knowing when and where 
-  people engage with your content helps inform better decisions.
+    <div class="boost container">
+      <h5>Boost your links today</h5>
+      <a href class="button get-started">Get Started</a>
+    </div>
 
-  Fully Customizable
+    <footer class="container">
+      <img src="assets/images/logo.svg" alt="logo" class="logo">
+      <ul>
+        <li>
+          <ul>
+            <li><h6>Features</h6></li>
+            <li>Link Shortening</li>
+            <li>Branded Links</li>
+            <li>Analytics/li>
+            </ul>
+          </li>
 
-  Improve brand awareness and content discoverability through customizable 
-  links, supercharging audience engagement.
+          <li>
+            <ul>
+              <li><h6>Resources</h6></li>
+              <li>Blog</li>
+              <li>Developers</li>
+              <li>Support</li>
+            </ul>
+          </li>
 
-  Boost your links today
+          <li>
+            <ul>
+              <li><h6>Company</h6></li>
+              <li>About</li>
+              <li>Our Team</li>
+              <li>Careers</li>
+              <li>Contact</li>
+            </ul>
+          </li>
 
-  Get Started
+          <li class="social">
 
-  Features
+            <img src="assets/images/icon-facebook.svg" alt="icon-facebook"
+              class="contact">
 
-  Link Shortening
-  Branded Links
-  Analytics
+            <img src="assets/images/icon-twitter.svg" alt="icon-twitter"
+              class="contact">
 
-  Resources
+            <img src="assets/images/icon-pinterest.svg" alt="icon-pinterest"
+              class="contact">
 
-  Blog
-  Developers
-  Support
+            <img src="assets/images/icon-instagram.svg" alt="icon-instagram"
+              class="contact">
 
-  Company
+          </li>
 
-  About
-  Our Team
-  Careers
-  Contact
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
-</html>
+        </ul>
+
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank">Frontend Mentor</a>.
+          Coded by <a href="https://github.com/Astr0n1">Ayman hussein</a>.
+        </div>
+      </footer>
+
+    </body>
+  </html>
