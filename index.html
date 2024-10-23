@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="icon" type="image/png" sizes="32x32"
       href="./assets/images/favicon-32x32.png">
     <link rel="stylesheet" href="assets/CSS/main.css">
+
     <title>Shortly URL | Shortening API</title>
+
+    <script defer src="assets/JS/index.js"></script>
+
     <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+
   </head>
   <body>
     <header>
@@ -45,12 +51,24 @@
         </div>
       </section>
 
-      <section class="shorten container">
-        <form>
-          <input type="url" name="source-url"
-            placeholder="Shorten a link here..." required>
-          <button type="button" class="button">Shorten It!</button>
-        </form>
+      <section class="shorten ">
+        <div class="shorten-form container">
+          <form id="shorten-url">
+            <input type="url" name="source-url" id="source-url"
+              placeholder="Shorten a link here..." required>
+            <button type="submit" class="button">Shorten
+              It!</button>
+          </form>
+        </div>
+        <ul class="history container">
+          <!-- <li>
+            <p>https://current</p>
+            <div>
+              <p class="short-url">http://new</p>
+              <button type="submit" class="button">Copy</button>
+            </div>
+          </li> -->
+        </ul>
       </section>
 
       <section class="statistics">

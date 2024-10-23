@@ -103,42 +103,89 @@ h2 {
 }
 
 .shorten {
+  background-color: var(--color-bg-gray);
+  width: 100%;
+}
+
+.shorten-form {
   background-image: url(../images/bg-shorten-desktop.svg);
   background-position: center;
   background-size: cover;
   background-color: var(--color-dark-violet);
   padding: 30px;
   border-radius: 15px;
-  transform: translateY(50%);
+  margin-block: 100px 0;
+  transform: translateY(-50%);
 }
 
-.shorten form {
+.shorten-form form {
   display: flex;
   gap: 30px;
 }
 
-.shorten input,
-.shorten button {
+.shorten-form input,
+.shorten-form button {
   border-radius: 10px;
   height: 50px;
 }
 
-.shorten input {
+.shorten-form input {
   width: calc(100% - 150px);
   padding-left: 20px;
   font-size: 2rem;
 }
 
-.shorten input:focus {
+.shorten-form input:focus {
   outline: unset;
   border: unset;
 }
 
-.shorten button {
+.shorten-form button {
   width: 150px;
+}
+
+button.button {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 900;
   text-wrap: nowrap;
+  cursor: pointer;
+}
+
+.history {
+  max-height: calc(6 * 100px - 15px);
+  overflow-y: scroll;
+}
+
+.history li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  font-weight: 400;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+
+.history li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+li button {
+  width: 100px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.history div {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  color: var(--color-cyan);
 }
 
 .statistics {
@@ -256,10 +303,13 @@ h2 {
   border-radius: 30px;
   text-transform: uppercase;
   transition: 0.2s ease-in-out;
+  border-color: transparent;
+  outline: unset;
+  cursor: pointer;
 }
 
-.button:hover {
-  scale: 1.05;
+.copied {
+  background-color: var(--color-dark-violet);
 }
 
 footer {
