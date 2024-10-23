@@ -1,3 +1,4 @@
+const menu = document.querySelector(".menu");
 const urlDOM = document.getElementById("source-url");
 const form = document.getElementById("shorten-url");
 const history = document.querySelector(".history");
@@ -27,6 +28,11 @@ history.addEventListener("click", (e) => {
 
   const link = item.querySelector(".short-url").textContent;
   copyToClipboard(link);
+});
+
+menu.addEventListener("click", (e) => {
+  document.querySelector("nav").classList.toggle("closed");
+  console.log("hehe");
 });
 
 /////////////////////////////////////////////////////////////////
@@ -76,13 +82,13 @@ function updateLocalStorage() {
       shortUrl: link.querySelector(".short-url").textContent,
     };
   });
-  console.log(objectLinks);
+  // console.log(objectLinks);
   localStorage.setItem("links", JSON.stringify(objectLinks));
 }
 
 function restoreLocalStorage() {
   const objectLinks = JSON.parse(localStorage.getItem("links"));
-  console.log(objectLinks);
+  // console.log(objectLinks);
   objectLinks.forEach((link) => insertURL(link.longUrl, link.shortUrl));
 }
 ///////////////////////////////////////////////////////////////////
