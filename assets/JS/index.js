@@ -2,6 +2,8 @@ const urlDOM = document.getElementById("source-url");
 const form = document.getElementById("shorten-url");
 const history = document.querySelector(".history");
 
+let links = [];
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const url = urlDOM.value.trim();
@@ -44,14 +46,19 @@ async function shortenUrl(url) {
 function insertURL(long, short) {
   const markUp = `
           <li>
-            <p>${long}</p>
+            <p class="long-url" data-url="${long}">${long}</p>
             <div>
               <p class="short-url">${short}</p>
               <button type="submit" class="button">Copy</button>
             </div>
           </li>`;
 
-  history.insertAdjacentHTML("afterbegin", markUp);
+  const fragment = document.createRange().createContextualFragment(markUp);
+  const element = fragment.firstElementChild;
+
+  links.push(element);
+  history.insertAdjacentElement("afterbegin", element);
+  updateLocalStorage();
 }
 
 async function copyToClipboard(text) {
@@ -61,4 +68,23 @@ async function copyToClipboard(text) {
     console.error("Could not copy text to clipboard:", err);
   }
 }
+
+function updateLocalStorage() {
+  const objectLinks = links.map((link) => {
+    return {
+      longUrl: link.querySelector(".long-url").textContent,
+      shortUrl: link.querySelector(".short-url").textContent,
+    };
+  });
+  console.log(objectLinks);
+  localStorage.setItem("links", JSON.stringify(objectLinks));
+}
+
+function restoreLocalStorage() {
+  const objectLinks = JSON.parse(localStorage.getItem("links"));
+  console.log(objectLinks);
+  objectLinks.forEach((link) => insertURL(link.longUrl, link.shortUrl));
+}
 ///////////////////////////////////////////////////////////////////
+
+restoreLocalStorage();

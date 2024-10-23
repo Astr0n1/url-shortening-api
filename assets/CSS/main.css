@@ -157,6 +157,7 @@ button.button {
 }
 
 .history li {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -175,6 +176,32 @@ button.button {
 
 li button {
   width: 100px;
+}
+
+p.long-url {
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: 0.3s linear;
+}
+
+p.long-url:hover::after {
+  box-sizing: border-box;
+  content: attr(data-url);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: beige;
+  padding: 20px;
+  border-radius: 15px;
+  word-break: break-all;
+  text-wrap: wrap;
+  font-size: 0.8rem;
+  height: 100%;
 }
 
 ::-webkit-scrollbar {
